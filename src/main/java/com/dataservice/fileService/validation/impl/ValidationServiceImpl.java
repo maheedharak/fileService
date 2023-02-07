@@ -20,7 +20,7 @@ public class ValidationServiceImpl implements ValidationService {
     @Override
     public boolean validateFileType(FileDetails uploadedFile) {
        for(FileType types: FileType.values()){
-           if(types.getType() == uploadedFile.getFileType()){
+           if(types.getType().equals(uploadedFile.getFileType())){
                return true;
            }
        }

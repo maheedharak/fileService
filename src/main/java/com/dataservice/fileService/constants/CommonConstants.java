@@ -18,7 +18,7 @@ public class CommonConstants {
 
     public static final String TEMPFILEPATH ="java.io.tmpdir";
 
-    public static final int THRESHHOLD_SIZE = 5000;
+    public static final int THRESHHOLD_SIZE = 10000;
 
 
     public static long MAXFILESIZE = 10485760;

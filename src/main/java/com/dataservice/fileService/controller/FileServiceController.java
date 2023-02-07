@@ -41,7 +41,7 @@ public class FileServiceController {
             return ResponseEntity.ok(datapointService.processFile(fileDetailsObj));
         }
 
-        return ResponseEntity.ok(CommonConstants.DATA_INSERTION_FAILED);
+        return ResponseEntity.ok((CommonConstants.DATA_INSERTION_FAILED).toString());
 
     }
 

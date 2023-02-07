@@ -52,12 +52,13 @@ public class DatapointServiceImpl implements DatapointService {
        //     int i = 0;
             int startIndex = 0 ;
             int endIndex = Math.min(CommonConstants.THRESHHOLD_SIZE,dataSize);
-           do{
-            List<DatapointData> dataPointDataLst = dataModelLst.subList(startIndex,endIndex).stream()
+            List<DatapointData> dataPointDataLst = dataModelLst.stream()
                     .map(obj -> objectConverter.generateDatapointDataObj(obj,datapointId))
                     .collect(Collectors.toList());
+           do{
+
 try {
-    this.datapointDataRepo.saveAllAndFlush(dataPointDataLst);
+    this.datapointDataRepo.saveAllAndFlush(dataPointDataLst.subList(startIndex,endIndex));
 }catch(Exception e){
     System.out.println("Exception is "+e);
 }
