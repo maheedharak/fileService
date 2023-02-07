@@ -17,3 +17,5 @@ This can be enhanced to partially process the file and report all the errors at 
 A datapoint table is created with the details of the file and a unique id
 The unique datapointid along with the data is stored is saved in the db.
 
+FileServiceApplication is the entry point. The application can be used as a standalone jar
+
